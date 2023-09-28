@@ -18,7 +18,7 @@ The Safe Area Layout Guide defines an area on the screen where it's safe to plac
   The closure on lines 23...25 captures a weak reference to `self`. Where `self` is a reference to the current instance of the object. By capturing it weakly, we avoid creating a strong reference from the closure. This also can save us from memory leaks.
 - **Why is it important?**
 
-  Sdfsdfsddsssfsdfs
+  Capturing `self` strongly in a closure can lead to a situation, when two or more objects have strong references to each other, preventing them from being deallocated when they are no longer needed. This can result a memory leak, because the objects will not be able to be released from the memory. By capturing `self` weakly, we break this strong reference, allowing the objects to be deallocated from the memory when they are no longer in use. So we can work safely without memory leaks.
 
 ### Question 5: What does clipsToBounds mean?
 **_developer.apple.com_** says: "clipsToBounds is a Boolean value that determines whether subviews are confined to the bounds of the view".

@@ -94,14 +94,14 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
         static let hideButtonTitle: String = "Hide sliders"
         static let randomColorButtonTitle: String = "Set random color"
         static let colorPickerButtonTitle: String = "Use iOS color picker"
-
+        
         static let leadingAnchor: CGFloat = 20
         
         static let title: String = "WishMaker"
         static let titleFontSize: CGFloat = 32
         static let titleTopAnchor: CGFloat = 30
         
-        static let description: String = 
+        static let description: String =
         """
         This small app can lift your spirits and fulfill three of your wishes!
             · You are able to change background color
@@ -117,7 +117,7 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
         
         static let randomColorAnimationDur: Double = 0.3
         static let colorPickerAnimationDur: Double = 0.5
-
+        
         
     }
     
@@ -128,7 +128,7 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
     let hideButton = UIButton()
     let randomColorButton = UIButton()
     let colorPickerButton = UIButton()
-
+    
     let sliderRed = CustomSlider(title: Constants.red, min: Constants.colorMin, max: Constants.colorMax)
     let sliderGreen = CustomSlider(title: Constants.green, min: Constants.colorMin, max: Constants.colorMax)
     let sliderBlue = CustomSlider(title: Constants.blue, min: Constants.colorMin, max: Constants.colorMax)
@@ -138,7 +138,7 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
         super.viewDidLoad()
         configureUI()
     }
-
+    
     //MARK: - configure UI
     private func configureUI() {
         let color = UIColor(
@@ -148,13 +148,13 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
             alpha: Constants.alphaValue
         )
         ChangeColors(color: color, sliderRed: sliderRed, sliderGreen: sliderGreen, sliderBlue: sliderBlue)
-
+        
         configureTitle()
         configureDescription()
         configureButtons()
         configureSliders()
     }
-
+    
     // MARK: - configure all buttons
     private func configureButtons() {
         configureHideButton()

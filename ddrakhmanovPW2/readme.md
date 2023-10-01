@@ -10,7 +10,7 @@ sdfsdfsdfsd fdsfs fsfs sf s sdfs
 ### Question 2: What does the code on lines 25 and 29 do?
 
 ### Question 3: What is a safe area layout guide?
-The Safe Area Layout Guide defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. Safe Area Layout Guide can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).
+The `Safe Area Layout Guide` defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. `Safe Area Layout Guide` can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).
 
 ### Question 4: What is [weak self] on line 23 and why it is important?
 - `[weak self]`
@@ -21,7 +21,7 @@ The Safe Area Layout Guide defines an area on the screen where it's safe to plac
   Capturing `self` strongly in a closure can lead to a situation, when two or more objects have strong references to each other, preventing them from being deallocated when they are no longer needed. This can result a memory leak, because the objects will not be able to be released from the memory. By capturing `self` weakly, we break this strong reference, allowing the objects to be deallocated from the memory when they are no longer in use. So we can work safely without memory leaks.
 
 ### Question 5: What does clipsToBounds mean?
-**_developer.apple.com_** says: "clipsToBounds is a Boolean value that determines whether subviews are confined to the bounds of the view".
+**_developer.apple.com_** says: "`clipsToBounds` is a Boolean value that determines whether subviews are confined to the bounds of the view". It works the next way:
 - setting to `true` implies that the view will clip any subviews that are drawn outside of its own bounds. So, if a subview is partly or completely outside the bounds of its parent view, the part of the subview that is outside those bounds will not be visible.
 - setting to `false` means that the subviews will be drawn outside of the parent view's bounds, and they will be fully visible regardless of their position.
 

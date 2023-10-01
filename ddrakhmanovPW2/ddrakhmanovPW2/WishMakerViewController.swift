@@ -28,6 +28,7 @@ final class CustomSlider: UIView {
     var slider = UISlider()
     var titleView = UILabel()
     
+    // MARK: - custom sliders constructor
     init(title: String, min: Double, max: Double) {
         super.init(frame: .zero)
         titleView.text = title
@@ -44,6 +45,7 @@ final class CustomSlider: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - configure UI for CustomSliders
     private func configureUI() {
         backgroundColor = Constants.viewColor
         translatesAutoresizingMaskIntoConstraints = false
@@ -121,7 +123,7 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
         
     }
     
-    //MARK: - fields
+    // MARK: - fields
     let slidersStack = UIStackView()
     let titleLabel = UILabel()
     let descriptionLabel = UILabel()
@@ -133,13 +135,13 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
     let sliderGreen = CustomSlider(title: Constants.green, min: Constants.colorMin, max: Constants.colorMax)
     let sliderBlue = CustomSlider(title: Constants.blue, min: Constants.colorMin, max: Constants.colorMax)
     
-    
+    // MARK: - viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
     
-    //MARK: - configure UI
+    // MARK: - configure UI
     private func configureUI() {
         let color = UIColor(
             red: .random(in: Constants.colorMin...Constants.colorMax),
@@ -341,6 +343,7 @@ class WishMakerViewController: UIViewController, UIColorPickerViewControllerDele
         return [Constants.defaultComponent, Constants.defaultComponent, Constants.defaultComponent]
     }
     
+    // MARK: - ChangeColors method
     private func ChangeColors(color: UIColor, sliderRed: CustomSlider, sliderGreen: CustomSlider, sliderBlue: CustomSlider) {
         view.backgroundColor = color
         sliderRed.slider.minimumTrackTintColor = color

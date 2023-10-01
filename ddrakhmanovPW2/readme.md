@@ -26,3 +26,16 @@ The `Safe Area Layout Guide` defines an area on the screen where it's safe to pl
 - setting to `false` means that the subviews will be drawn outside of the parent view's bounds, and they will be fully visible regardless of their position.
 
 ### Question 6: What is the valueChanged type? What is Void and what is Double?
+- `valueChanged`
+  
+  The `valueChanged` event is a common type of event you can observe for UI elements such as slider, text fields and etc. using, for example, closures. We use `valueChanged` when we set up a target-action for an UI element the valueChanged event occurs when the user changes the slider's value. The type of `valueChanged` event is typically defined as `UIControl.Event.valueChanged`.
+
+- `Void`
+
+  `Void` is a data-type which is an empty tuple (equivalent to the `()`). It is used for defining functions that return nothing. Even if we don't specify a return type for a function, it will be `void` in standart.
+
+- `Double`
+
+  `Double` is a data-type for 64-bit floating-point numbers with a precision of at least 15 decimal digits. `Double` can also be used as a function return type.
+
+  

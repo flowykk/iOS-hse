@@ -12,6 +12,9 @@ Here are some issues which can can prevent us from using storyboards in real pro
 - Developers can struggle with creating adaptive desig for different screens and devices. Achieving perfect-looking design on different devices might require additional effort and code adjustments.
 
 ### Question 2: What does the code on lines 25 and 29 do?
+- `25. title.translatesAutoresizingMaskIntoConstraints = false`
+  When you create a user interface in iOS using Auto Layout and want to add your own constraints instead of relying on automatically generated constraints. Setting `translatesAutoresizingMaskIntoConstraints` to `false` implies that you disable all the automatically generated constraints for `title`. Then you can add your own constraints for `title` using Auto Layout.
+  
 
 ### Question 3: What is a safe area layout guide?
 The `Safe Area Layout Guide` defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. `Safe Area Layout Guide` can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).

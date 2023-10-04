@@ -14,16 +14,16 @@ Here are some issues which can can prevent us from using storyboards in real pro
 ### Question 2: What does the code on lines 25 and 29 do?
 - `25. title.translatesAutoresizingMaskIntoConstraints = false`
   
-  When you create a user interface in iOS using Auto Layout and want to add your own constraints instead of relying on automatically generated constraints. Setting `translatesAutoresizingMaskIntoConstraints` to `false` implies that you disable all the automatically generated constraints for `title`. Then you can add your own constraints for `title` using Auto Layout.
+  When you create a user interface in iOS using *__Auto Layout__* and want to add your own constraints instead of relying on automatically generated constraints. Setting `translatesAutoresizingMaskIntoConstraints` to `false` implies that you disable all the automatically generated constraints for `title`. Then you can add your own constraints for `title` using *__Auto Layout__*.
   
 
 ### Question 3: What is a safe area layout guide?
-The `Safe Area Layout Guide` defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. `Safe Area Layout Guide` can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).
+The *__Safe Area Layout Guide__* defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. *__Safe Area Layout Guide__* can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).
 
 ### Question 4: What is [weak self] on line 23 and why it is important?
 - `[weak self]`
 
-  The closure on lines 23...25 captures a weak reference to `self`. Where `self` is a reference to the current instance of the object. By capturing it weakly, we avoid creating a strong reference from the closure. This also can save us from memory leaks.
+  The closure on lines *__23...25__* captures a weak reference to `self`. Where `self` is a reference to the current instance of the object. By capturing it weakly, we avoid creating a strong reference from the closure. This also can save us from memory leaks.
 - **Why is it important?**
 
   Capturing `self` strongly in a closure can lead to a situation, when two or more objects have strong references to each other, preventing them from being deallocated when they are no longer needed. This can result a memory leak, because the objects will not be able to be released from the memory. By capturing `self` weakly, we break this strong reference, allowing the objects to be deallocated from the memory when they are no longer in use. So we can work safely without memory leaks.

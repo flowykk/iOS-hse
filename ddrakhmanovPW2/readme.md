@@ -18,7 +18,7 @@ Here are some issues which can can prevent us from using storyboards in real pro
 
 - `29. view.addSubview(title)`
   
-`view.addSubview(title)` essentially places the `title` view inside the `view` as a subcomponent. This means that `title` becomes a child of `view`. It is important because it adds the `title` view in the `view` hierarchy, allowing it to be displayed on the screen.
+  `view.addSubview(title)` essentially places the `title` view inside the `view` as a subcomponent. This means that `title` becomes a child of `view`. It is important because it adds the `title` view in the `view` hierarchy, allowing it to be displayed on the screen.
 
 ### Question 3: What is a safe area layout guide?
 The *__Safe Area Layout Guide__* defines an area on the screen where it's safe to place UI elements of your app without any confusion and mistakes which can occur after UI elements will be clipped by the device's physical features. *__Safe Area Layout Guide__* can help us to work safe with elements like the status bar, the home indicator (for example, iPhone X and later).

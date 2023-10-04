@@ -13,6 +13,7 @@ Here are some issues which can can prevent us from using storyboards in real pro
 
 ### Question 2: What does the code on lines 25 and 29 do?
 - `25. title.translatesAutoresizingMaskIntoConstraints = false`
+  
   When you create a user interface in iOS using Auto Layout and want to add your own constraints instead of relying on automatically generated constraints. Setting `translatesAutoresizingMaskIntoConstraints` to `false` implies that you disable all the automatically generated constraints for `title`. Then you can add your own constraints for `title` using Auto Layout.
   
 

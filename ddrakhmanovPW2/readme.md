@@ -5,7 +5,11 @@
 
 # Questions answers
 ### Question 1: What issues prevent us from using storyboards in real projects?
-sdfsdfsdfsd fdsfs fsfs sf s sdfs 
+Here are some issues which can can prevent us from using storyboards in real projects:
+- When using version control systems like Git, Storyboard's XML files can lead to merge conflicts. It can cause problems when multiple developers are working on the same Storyboard.
+-  In large, Storyboards can become bulky, making it difficult and uncomfortable for developers to manage user interfaces with many screens and components. Also customizing difficult interfaces can be difficult to achieve using Storyboards. Custom UI components might need to be created programmatically.
+- It can be challenging to reuse some new features and interface elements in older Xcode versions.
+- Developers can struggle with creating adaptive desig for different screens and devices. Achieving perfect-looking design on different devices might require additional effort and code adjustments.
 
 ### Question 2: What does the code on lines 25 and 29 do?
 
